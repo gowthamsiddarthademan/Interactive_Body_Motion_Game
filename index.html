@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        #gameCanvas {
+            border: 2px solid lightblue;
+        }
+
+        .stats {
+            position: absolute;
+            top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+
+        .stats div {
+            background-color: black;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        #playAgain {
+            display: none;
+            position: absolute;
+            top: 300px;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #calibrationMessage {
+            position: absolute;
+            top: 40%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stats">
+        <div id="scoreboard">Score: 0</div>
+        <div id="timer">Time: 60</div>
+    </div>
+
+    <div id="calibrationMessage">Please stand so your full body is visible in the box.</div>
+    <canvas id="gameCanvas"></canvas>
+    <button id="playAgain">Play Again</button>
+
+    <script src="https://unpkg.com/ml5@0.10.0/dist/ml5.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
